@@ -262,6 +262,33 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
 @media (min-width:900px){.action-bar{display:none}}
 @media (max-width:899px){body{padding-bottom:calc(76px + env(safe-area-inset-bottom, 0px))}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* Full-bleed vertical sections (automotive / aviation / marine) */
+.feature{position:relative;isolation:isolate;overflow:hidden;border-top:1px solid var(--line);display:flex;align-items:center;min-height:clamp(500px,78vh,700px)}
+.feature-bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center}
+.feature::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,12,16,.55) 0%,rgba(10,12,16,.35) 40%,rgba(10,12,16,.9) 100%)}
+@media (min-width:900px){
+  .feature::after{background:linear-gradient(90deg,rgba(10,12,16,.88) 0%,rgba(10,12,16,.55) 45%,rgba(10,12,16,.1) 100%)}
+  .feature.right::after{background:linear-gradient(270deg,rgba(10,12,16,.88) 0%,rgba(10,12,16,.55) 45%,rgba(10,12,16,.1) 100%)}
+}
+.feature .wrap{width:100%;padding-block:72px}
+.feature-copy{display:grid;gap:18px;max-width:560px}
+.feature.right .feature-copy{margin-left:auto;text-align:right;justify-items:end}
+.feature h2{font-size:clamp(46px,7.4vw,84px)}
+.feature-copy > p:not(.eyebrow){color:var(--fg-2);font-size:clamp(17px,2vw,19px);max-width:46ch;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.feature-link{display:inline-flex;align-items:center;gap:10px;margin-top:6px;font-family:var(--f-mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--fg);padding-bottom:6px;border-bottom:1px solid var(--accent)}
+.feature-link svg{width:16px;height:16px;transition:transform .2s}
+.feature-link:hover svg{transform:translateX(3px)}
+.feature.auto .feature-bg{background-image:url("https://images.unsplash.com/photo-1725199294836-d48bc3804281?auto=format&fit=crop&w=1800&q=70"),radial-gradient(120% 90% at 80% 70%,#5a4310 0%,#1a1810 45%,#0b0e14 100%);background-position:70% center}
+.feature.air .feature-bg{background-image:url("https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=1800&q=70"),radial-gradient(120% 90% at 20% 30%,#3a4b66 0%,#151c28 55%,#0b0e14 100%);background-position:35% center}
+.feature.sea .feature-bg{background-image:url("https://images.unsplash.com/photo-1622219969983-45589eae5637?auto=format&fit=crop&w=1800&q=70"),radial-gradient(120% 90% at 70% 20%,#6a4a2a 0%,#24222a 50%,#0b0e14 100%);background-position:60% center}
+
+/* Service duration */
+.svc{grid-template-rows:auto 1fr auto}
+.svc-time{justify-self:end;display:inline-flex;align-items:center;gap:7px;margin-top:6px;padding:6px 10px;border:1px solid var(--line-2);border-radius:999px;font-family:var(--f-mono);font-size:12px;letter-spacing:.04em;color:var(--fg);font-variant-numeric:tabular-nums;white-space:nowrap}
+.svc-time svg{width:14px;height:14px;color:var(--accent-hi)}
+.svc-time span{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:10px}
+.photo-credit{font-size:13px!important}
+.photo-credit a{color:var(--muted)}
 </style>
 
 </head>
@@ -330,25 +357,56 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
     </div>
   </section>
 
+  <!-- AUTOMOTIVE / AVIATION / MARINE -->
+  <section class="feature auto" id="automotive">
+    <div class="feature-bg" role="img" aria-label="Yellow sports car in a garage"></div>
+    <div class="wrap"><div class="feature-copy">
+      <p class="eyebrow">Automotive</p>
+      <h2>Your vehicle deserves more than a wash.</h2>
+      <p>From paint correction and ceramic coatings to full interior restoration, we treat every vehicle like a showpiece. No shortcuts. No compromises.</p>
+      <a class="feature-link" href="#services">Explore automotive <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    </div></div>
+  </section>
+
+  <section class="feature air right" id="aviation">
+    <div class="feature-bg" role="img" aria-label="White private jet on the tarmac at golden hour"></div>
+    <div class="wrap"><div class="feature-copy">
+      <p class="eyebrow">Aviation</p>
+      <h2>Precision at altitude.</h2>
+      <p>Aircraft detailing demands a different level of expertise. We work with private jets and turboprops, delivering meticulous exterior and interior care that meets the standards of the sky.</p>
+      <a class="feature-link" href="#book" data-prefill="aircraft">Explore aviation <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    </div></div>
+  </section>
+
+  <section class="feature sea" id="marine">
+    <div class="feature-bg" role="img" aria-label="Motor yacht at the dock at sunset"></div>
+    <div class="wrap"><div class="feature-copy">
+      <p class="eyebrow">Marine</p>
+      <h2>Hull to helm, flawless.</h2>
+      <p>Salt, sun and water take a toll. Our marine detailing restores and protects your vessel, from hull oxidation removal to full interior detailing, keeping it dock-ready all season.</p>
+      <a class="feature-link" href="#book" data-prefill="boat">Explore marine <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    </div></div>
+  </section>
+
   <!-- SERVICES -->
   <section class="band" id="services">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Services</p>
         <h2>What we do at your door</h2>
-        <p>From a regular upkeep wash to multi-year ceramic protection. Combine services in one visit and we'll plan the order of work.</p>
+        <p>From a full in &amp; out to multi-year ceramic protection. Times are estimates for a mid-size car and vary with size and condition.</p>
       </div>
 
       <div>
         <ul class="svc-list">
-          <li class="svc"><div class="svc-top"><h3>Maintenance detail</h3><span class="tag">Ext · Int</span></div><p>Hand wash, wheels and tires, door jambs, interior vacuum and wipe-down. Built for regular upkeep every few weeks.</p></li>
-          <li class="svc"><div class="svc-top"><h3>Full interior detail</h3><span class="tag">Interior</span></div><p>Steam, shampoo and hot-water extraction on seats and carpets. Leather cleaned and conditioned, salt stains lifted.</p></li>
-          <li class="svc"><div class="svc-top"><h3>Paint correction</h3><span class="tag">Exterior</span></div><p>One- or two-stage machine polishing to remove swirls, haze and light scratches, after the paint is inspected panel by panel.</p></li>
-          <li class="svc"><div class="svc-top"><h3>Ceramic coating</h3><span class="tag">Protection</span></div><p>Long-term gloss and protection that makes every wash easier. Applied after full decontamination and correction.</p></li>
-          <li class="svc"><div class="svc-top"><h3>Paint protection film</h3><span class="tag">Protection</span></div><p>Clear film on high-impact areas like the hood, bumper and mirrors to stop rock chips before they happen.</p></li>
-          <li class="svc"><div class="svc-top"><h3>Headlight restoration</h3><span class="tag">Exterior</span></div><p>Yellowed, foggy lenses sanded, polished and sealed against UV so you can see properly at night.</p></li>
-          <li class="svc"><div class="svc-top"><h3>Engine bay detail</h3><span class="tag">Exterior</span></div><p>Careful degreasing and dressing of plastics and hoses. Ideal before a sale or after a long winter.</p></li>
-          <li class="svc"><div class="svc-top"><h3>Odour &amp; pet hair removal</h3><span class="tag">Interior</span></div><p>Pet hair pulled from carpets and seats, and smoke or food odours treated at the source rather than masked.</p></li>
+          <li class="svc"><div class="svc-top"><h3>Full in &amp; out detail</h3><span class="tag">Ext · Int</span></div><p>Hand wash, wheels and tires, door jambs, full interior vacuum, wipe-down and glass, plus a spray sealant to finish.</p><span class="svc-time" aria-label="Estimated time 2.5–3.5 hrs"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg><span>Est.</span> 2.5–3.5 hrs</span></li>
+          <li class="svc"><div class="svc-top"><h3>Full interior detail</h3><span class="tag">Interior</span></div><p>Steam, shampoo and hot-water extraction on seats and carpets. Leather cleaned and conditioned, salt stains lifted.</p><span class="svc-time" aria-label="Estimated time 2–3 hrs"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg><span>Est.</span> 2–3 hrs</span></li>
+          <li class="svc"><div class="svc-top"><h3>Paint correction</h3><span class="tag">Exterior</span></div><p>One- or two-stage machine polishing to remove swirls, haze and light scratches, after the paint is inspected panel by panel.</p><span class="svc-time" aria-label="Estimated time 2–2.5 hrs"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg><span>Est.</span> 2–2.5 hrs</span></li>
+          <li class="svc"><div class="svc-top"><h3>Ceramic coating</h3><span class="tag">Protection</span></div><p>Long-term gloss and protection that makes every wash easier. Applied after full decontamination and correction.</p><span class="svc-time" aria-label="Estimated time 5–8 hrs"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg><span>Est.</span> 5–8 hrs</span></li>
+          <li class="svc"><div class="svc-top"><h3>Paint protection film</h3><span class="tag">Protection</span></div><p>Clear film on high-impact areas like the hood, bumper and mirrors to stop rock chips before they happen.</p><span class="svc-time" aria-label="Estimated time 3–6 hrs"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg><span>Est.</span> 3–6 hrs</span></li>
+          <li class="svc"><div class="svc-top"><h3>Headlight restoration</h3><span class="tag">Exterior</span></div><p>Yellowed, foggy lenses sanded, polished and sealed against UV so you can see properly at night.</p><span class="svc-time" aria-label="Estimated time 45–60 min"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg><span>Est.</span> 45–60 min</span></li>
+          <li class="svc"><div class="svc-top"><h3>Engine bay detail</h3><span class="tag">Exterior</span></div><p>Careful degreasing and dressing of plastics and hoses. Ideal before a sale or after a long winter.</p><span class="svc-time" aria-label="Estimated time 45–60 min"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg><span>Est.</span> 45–60 min</span></li>
+          <li class="svc"><div class="svc-top"><h3>Odour &amp; pet hair removal</h3><span class="tag">Interior</span></div><p>Pet hair pulled from carpets and seats, and smoke or food odours treated at the source rather than masked.</p><span class="svc-time" aria-label="Estimated time 1–2 hrs"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg><span>Est.</span> 1–2 hrs</span></li>
         </ul>
       </div>
 
@@ -413,29 +471,6 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
     </div>
   </section>
 
-  <!-- BEYOND -->
-  <section class="band">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Beyond the driveway</p>
-        <h2>Also on the tarmac and the dock</h2>
-      </div>
-      <div class="beyond-grid">
-        <a class="beyond-card air" href="#book" data-prefill="aircraft">
-          <p class="eyebrow">Aviation</p>
-          <h3>Precision at altitude</h3>
-          <p>Exterior and interior care for private jets and turboprops, to the standard aviation demands.</p>
-          <span class="more">Ask about aviation <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
-        </a>
-        <a class="beyond-card sea" href="#book" data-prefill="boat">
-          <p class="eyebrow">Marine</p>
-          <h3>Hull to helm, flawless</h3>
-          <p>Hull oxidation removal through full interior detailing, so your boat stays dock-ready all season.</p>
-          <span class="more">Ask about marine <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
-        </a>
-      </div>
-    </div>
-  </section>
 
   <!-- REVIEWS -->
   <section class="band" id="reviews">
@@ -509,7 +544,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
           <legend>What does it need?</legend>
           <div class="pick-group">
             <div class="pick" id="pickDetail">
-              <label><input type="checkbox" id="s-maint" value="Maintenance detail"><span>Maintenance detail</span></label>
+              <label><input type="checkbox" id="s-maint" value="Full in & out detail"><span>Full in &amp; out</span></label>
               <label><input type="checkbox" id="s-int" value="Full interior detail"><span>Full interior</span></label>
               <label><input type="checkbox" id="s-corr" value="Paint correction"><span>Paint correction</span></label>
               <label><input type="checkbox" id="s-cer" value="Ceramic coating"><span>Ceramic coating</span></label>
@@ -549,6 +584,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
     <div style="display:grid;gap:10px">
       <a class="mark" href="#top">PRΞCISION LΛBZ</a>
       <p>Mobile detailing · Automotive, aviation &amp; marine · Greater Toronto Area · © 2026</p>
+      <p class="photo-credit">Photos: <a href="https://unsplash.com/@martuflex" target="_blank" rel="noopener">Mathew Antony</a>, <a href="https://unsplash.com/photos/private-jet-on-tarmac-at-sunset-6w_dYdazo20" target="_blank" rel="noopener">Unsplash</a>, <a href="https://unsplash.com/@barczakshoots" target="_blank" rel="noopener">Damian Barczak</a></p>
     </div>
     <nav class="foot-links" aria-label="Footer">
       <a href="#services">Services</a><a href="#process">Process</a><a href="#reviews">Reviews</a><a href="#book">Book</a>
