@@ -6,7 +6,7 @@
 <style>html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
 <title>Precision Labz</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Mobile car detailing across the Greater Toronto Area. Paint correction, interiors and ceramic protection at your driveway, garage or lot.">
+<meta name="description" content="Mobile car detailing across the GTA, west to London and Niagara. Paint correction, interiors and ceramic protection at your driveway, garage or lot.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Michroma&display=swap">
@@ -209,6 +209,10 @@ p{margin:0}
 .area .wrap{display:grid;gap:32px}
 @media (min-width:900px){.area .wrap{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start;gap:72px}}
 .area .sec-head{margin-bottom:0}
+.area-span{color:var(--fg)!important;font-weight:500}
+.area-groups{display:grid;gap:28px;min-width:0}
+.area-group{display:grid;gap:12px}
+.area-label{font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-hi)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
 .chips li{padding:10px 16px;border:1px solid var(--line-2);border-radius:999px;font-size:15px;color:var(--fg-2)}
 
@@ -302,7 +306,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
       <a href="#process">Process</a>
       <a href="#reviews">Reviews</a>
       <a href="#area">Service area</a>
-      <a class="btn btn-primary" href="#book">Book a visit</a>
+      <a class="btn btn-primary" href="#book">Book appointment</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu"><span></span></button>
   </div>
@@ -312,7 +316,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
       <a href="#process">Process</a>
       <a href="#reviews">Reviews</a>
       <a href="#area">Service area</a>
-      <a href="#book">Book a visit</a>
+      <a href="#book">Book appointment</a>
     </div>
   </div>
 </header>
@@ -330,7 +334,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
         </h1>
         <p class="lede">We bring the detail bay to your driveway, condo garage or office lot. Paint correction, full interiors and ceramic protection, done properly without you leaving home.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#book">Book a visit
+          <a class="btn btn-primary" href="#book">Book appointment
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
           <a class="btn btn-ghost" href="#services">See services</a>
         </div>
@@ -353,7 +357,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
       <dl class="proof">
         <div><dt>We come to you</dt><dd>Driveway, garage or lot</dd></div>
         <div><dt>Inside &amp; out</dt><dd>Interior, paint, protection</dd></div>
-        <div><dt>Coverage</dt><dd>Anywhere in the GTA</dd></div>
+        <div><dt>Coverage</dt><dd>GTA to London &amp; Niagara</dd></div>
       </dl>
     </div>
   </section>
@@ -506,11 +510,23 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
       <div class="sec-head">
         <p class="eyebrow">Service area</p>
         <h2>Anywhere in the GTA</h2>
+        <p class="area-span">East to west, from Oshawa all the way to London and Niagara.</p>
         <p>Home, condo, office or marina. If your city isn't listed, ask anyway.</p>
       </div>
-      <ul class="chips">
-        <li>Toronto</li><li>North York</li><li>Scarborough</li><li>Etobicoke</li><li>Mississauga</li><li>Brampton</li><li>Oakville</li><li>Burlington</li><li>Milton</li><li>Vaughan</li><li>Richmond Hill</li><li>Markham</li><li>Pickering</li><li>Ajax</li><li>Whitby</li><li>Oshawa</li>
-      </ul>
+      <div class="area-groups">
+        <div class="area-group">
+          <p class="area-label">Greater Toronto Area</p>
+          <ul class="chips">
+            <li>Oshawa</li><li>Whitby</li><li>Ajax</li><li>Pickering</li><li>Scarborough</li><li>Markham</li><li>Richmond Hill</li><li>Toronto</li><li>North York</li><li>Vaughan</li><li>Etobicoke</li><li>Mississauga</li><li>Brampton</li><li>Oakville</li><li>Milton</li><li>Burlington</li>
+          </ul>
+        </div>
+        <div class="area-group">
+          <p class="area-label">West to London &amp; Niagara</p>
+          <ul class="chips">
+            <li>Hamilton</li><li>Stoney Creek</li><li>Grimsby</li><li>St. Catharines</li><li>Niagara Falls</li><li>Niagara-on-the-Lake</li><li>Guelph</li><li>Cambridge</li><li>Kitchener</li><li>Waterloo</li><li>Brantford</li><li>Woodstock</li><li>London</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -518,7 +534,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
   <section class="band book" id="book">
     <div class="wrap">
       <div class="book-info">
-        <p class="eyebrow">Book a visit</p>
+        <p class="eyebrow">Book appointment</p>
         <h2>Ready to experience the difference?</h2>
         <p>Tell us about the vehicle and what it needs. We'll confirm a time and a price before we roll out.</p>
         <dl class="contact-list">
@@ -596,7 +612,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
 
 <div class="action-bar" id="actionBar">
   <a class="btn btn-ghost" href="sms:+16472749453"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z"/></svg>Text us</a>
-  <a class="btn btn-primary" href="#book">Book a visit</a>
+  <a class="btn btn-primary" href="#book">Book appointment</a>
 </div>
 
 <script>
