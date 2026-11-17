@@ -5,6 +5,7 @@
 - Website: https://precisionlabz.ca/
 - Text or call: (647) 274-9453
 - Email: Precisionlab2024@gmail.com
+- Instagram: https://www.instagram.com/precision.labz/
 - Booking: text your vehicle, location, preferred date and the services you want to (647) 274-9453. We confirm a time and price before we come out.
 
 ## Services and estimated times
