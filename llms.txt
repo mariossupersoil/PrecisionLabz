@@ -1,0 +1,23 @@
+# Precision Labz
+
+> Mobile car, aircraft and boat detailing that comes to the customer across the Greater Toronto Area, west to London and Niagara (Ontario, Canada). Book by text at (647) 274-9453 or email Precisionlab2024@gmail.com.
+
+Key facts:
+- Fully mobile: we work at the customer's home, condo garage, office lot or marina.
+- Services: full in & out detail (2.5–3.5 hrs), exterior wash (30–45 min), full interior detail (2–3 hrs), paint correction (2–2.5 hrs), ceramic coating (5–8 hrs), headlight restoration (45–60 min), engine bay detail (45–60 min), odour & pet hair removal (1–2 hrs). Times are estimates for a mid-size car.
+- Also detail private jets, turboprops and boats.
+- We do not offer paint protection film (PPF) or mechanical repairs.
+- Prices are quoted per vehicle after we know its size and condition.
+
+## Pages
+
+- [Home (Markdown)](https://precisionlabz.ca/index.md): services, process, service area and reviews in plain text
+- [Home](https://precisionlabz.ca/): main website
+- [About](https://precisionlabz.ca/about.html): who we are and how we work
+- [Contact](https://precisionlabz.ca/contact.html): phone, email and how to book
+
+## Optional
+
+- [Terms of service](https://precisionlabz.ca/terms.html)
+- [Privacy policy](https://precisionlabz.ca/privacy.html)
+- [Sitemap](https://precisionlabz.ca/sitemap.xml)

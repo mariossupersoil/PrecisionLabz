@@ -1,4 +1,11 @@
+# Precision Labz — https://precisionlabz.ca/
+# Content Signals (https://contentsignals.org/):
+#   search   = yes  allow indexing and showing links/snippets in search results
+#   ai-input = yes  allow AI assistants to read pages to answer questions in real time
+#   ai-train = no   do not use this content to train AI models
+
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
-Sitemap: https://mariossupersoil.github.io/PrecisionLabz/sitemap.xml
+Sitemap: https://precisionlabz.ca/sitemap.xml

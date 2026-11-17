@@ -1,0 +1,19 @@
+# Precision Labz — server rules (Apache / LiteSpeed, e.g. Hostinger)
+
+AddType text/markdown .md
+AddType text/plain .txt
+AddDefaultCharset utf-8
+AddCharset utf-8 .md .txt .html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Serve the Markdown version of the homepage to agents that ask for it
+  RewriteCond %{HTTP:Accept} text/markdown [NC]
+  RewriteRule ^(index\.html)?$ /index.md [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Advertise machine-readable resources on every page (RFC 8288)
+  Header always set Link "<https://precisionlabz.ca/llms.txt>; rel=\"describedby\"; type=\"text/plain\", <https://precisionlabz.ca/index.md>; rel=\"alternate\"; type=\"text/markdown\", <https://precisionlabz.ca/sitemap.xml>; rel=\"sitemap\"; type=\"application/xml\""
+  Header always append Vary Accept
+</IfModule>
