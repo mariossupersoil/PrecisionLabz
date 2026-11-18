@@ -1,17 +1,20 @@
 # Precision Labz
 
-> Mobile car, aircraft and boat detailing that comes to the customer across the Greater Toronto Area, west to London and Niagara (Ontario, Canada). Book by text at (647) 274-9453 or email Precisionlab2024@gmail.com.
+> Mobile detailing for cars, company fleets, boats and aircraft. We come to the customer across the Greater Toronto Area, west to London and Niagara (Ontario, Canada). Book by text at (647) 274-9453 or email Precisionlab2024@gmail.com.
 
 Key facts:
-- Fully mobile: we work at the customer's home, condo garage, office lot or marina.
-- Services: full in & out detail (2.5–3.5 hrs), exterior wash (30–45 min), full interior detail (2–3 hrs), paint correction (2–2.5 hrs), ceramic coating (5–8 hrs), headlight restoration (45–60 min), engine bay detail (45–60 min), odour & pet hair removal (1–2 hrs). Times are estimates for a mid-size car.
-- Also detail private jets, turboprops and boats.
+- Fully mobile: we work at the customer's home, condo garage, office lot, yard or marina.
+- Prices in CAD (final price confirmed before work starts):
+  - Automotive: Full in & out detail $180–$300 / vehicle; Full interior detail $150–$200 / vehicle; Exterior hand wash $70–$100 / vehicle; Engine bay detail $70–$90 / vehicle; Headlight restoration Ask for a quote; Odour & pet hair removal Ask for a quote; Vomit removal $100; Tree sap removal $60; Monthly automotive maintenance From $120 / month; Paint correction $400–$550 / vehicle; Ceramic coating Ask for a quote.
+  - Fleet: Fleet exterior wash $60 / vehicle; Fleet interior $100 / vehicle; Fleet full in & out $150 / vehicle; Monthly fleet maintenance $120 / vehicle per visit.
+  - Marine: Marine exterior wash From $400; Marine interior detail From $25 / ft; Marine gelcoat correction From $50 / ft; Marine ceramic protection From $75 / ft; Monthly marine maintenance From $15 / ft per month.
+  - Aviation: Aircraft exterior wash From $500; Aircraft interior detail From $100 / seat; Aircraft surface protection From $1,500; Monthly aircraft maintenance From $450 / month.
+- Marine prices are mostly per foot of boat length. Aviation and marine prices are starting prices.
 - We do not offer paint protection film (PPF) or mechanical repairs.
-- Prices are quoted per vehicle after we know its size and condition.
 
 ## Pages
 
-- [Home (Markdown)](https://precisionlabz.ca/index.md): services, process, service area and reviews in plain text
+- [Home (Markdown)](https://precisionlabz.ca/index.md): services, full price list, process, service area and reviews in plain text
 - [Home](https://precisionlabz.ca/): main website
 - [About](https://precisionlabz.ca/about.html): who we are and how we work
 - [Contact](https://precisionlabz.ca/contact.html): phone, email and how to book
