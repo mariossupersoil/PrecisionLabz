@@ -26,9 +26,9 @@ Prices are per vehicle in Canadian dollars. Times are estimates for a mid-size c
 | Odour & pet hair removal | Ask for a quote | 1–2 hrs | Pet hair pulled from carpets and seats, and smoke or food odours treated at the source rather than masked. |
 | Vomit removal | $100 | — | Affected areas extracted, sanitized and deodorized so the stain and the smell are both gone. |
 | Tree sap removal | $60 | — | Sap softened and lifted safely from paint and glass without scratching the finish. |
-| Monthly automotive maintenance | From $120 / month | — | A scheduled maintenance detail every month to keep your car looking freshly detailed all year. |
-| Paint correction | $400–$550 / vehicle | 2–2.5 hrs | One- or two-stage machine polishing to remove swirls, haze and light scratches, after the paint is inspected panel by panel. |
 | Ceramic coating | Ask for a quote | 5–8 hrs | Long-term gloss and protection that makes every wash easier. Applied after full decontamination and correction. |
+| Paint correction | $400–$550 / vehicle | 2–2.5 hrs | One- or two-stage machine polishing to remove swirls, haze and light scratches, after the paint is inspected panel by panel. |
+| Monthly automotive maintenance | From $120 / month | — | A scheduled maintenance detail every month to keep your car looking freshly detailed all year. |
 
 ### Fleet
 
