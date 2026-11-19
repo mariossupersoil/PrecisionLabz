@@ -1211,6 +1211,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
 .feature-link{display:inline-flex;align-items:center;gap:10px;margin-top:6px;font-family:var(--f-mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--fg);padding-bottom:6px;border-bottom:1px solid var(--accent)}
 .feature-link svg{width:16px;height:16px;transition:transform .2s}
 .feature-link:hover svg{transform:translateX(3px)}
+.feature.fleet .feature-bg{background-image:url("https://images.unsplash.com/photo-1653307592451-de5c3942ba2a?auto=format&fit=crop&w=1800&q=70"),radial-gradient(120% 90% at 30% 40%,#3a414d 0%,#171b22 55%,#0b0e14 100%);background-position:center}
 .feature.auto .feature-bg{background-image:url("https://images.unsplash.com/photo-1725199294836-d48bc3804281?auto=format&fit=crop&w=1800&q=70"),radial-gradient(120% 90% at 80% 70%,#5a4310 0%,#1a1810 45%,#0b0e14 100%);background-position:70% center}
 .feature.air .feature-bg{background-image:url("https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=1800&q=70"),radial-gradient(120% 90% at 20% 30%,#3a4b66 0%,#151c28 55%,#0b0e14 100%);background-position:35% center}
 .feature.sea .feature-bg{background-image:url("https://images.unsplash.com/photo-1622219969983-45589eae5637?auto=format&fit=crop&w=1800&q=70"),radial-gradient(120% 90% at 70% 20%,#6a4a2a 0%,#24222a 50%,#0b0e14 100%);background-position:60% center}
@@ -1231,7 +1232,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
     <a class="mark" href="#top" aria-label="Precision Labz home">PRΞCISION LΛBZ</a>
     <nav class="nav" aria-label="Main">
       <a href="#services">Pricing</a>
-      <a href="#services" data-tab="fleet">Fleet</a>
+      <a href="#fleet">Fleet</a>
       <a href="#process">Process</a>
       <a href="#reviews">Reviews</a>
       <a href="#area">Service area</a>
@@ -1242,7 +1243,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
   <div class="mobile-nav" id="mobileNav" hidden>
     <div class="wrap">
       <a href="#services">Pricing</a>
-      <a href="#services" data-tab="fleet">Fleet</a>
+      <a href="#fleet">Fleet</a>
       <a href="#process">Process</a>
       <a href="#reviews">Reviews</a>
       <a href="#area">Service area</a>
@@ -1263,7 +1264,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
           <span>Protect<span class="dot">.</span></span>
           <span class="stroke">Perfect.</span>
         </h1>
-        <p class="lede">We bring the detail bay to your driveway, condo garage or office lot. Paint correction, full interiors and ceramic protection, done properly without you leaving home.</p>
+        <p class="lede">We bring the detail bay to your driveway, condo, apartment, garage or parking lot. Paint correction, full interiors and ceramic protection, done properly without you leaving home.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#book">Book appointment
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
@@ -1286,7 +1287,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
       </div>
 
       <dl class="proof">
-        <div><dt>We come to you</dt><dd>Driveway, garage or lot</dd></div>
+        <div><dt>We come to you</dt><dd>Driveway, condo, apartment, garage or parking lot</dd></div>
         <div><dt>Inside &amp; out</dt><dd>Interior, paint, protection</dd></div>
         <div><dt>Coverage</dt><dd>GTA to London &amp; Niagara</dd></div>
       </dl>
@@ -1294,7 +1295,17 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
   </section>
 
   <!-- AUTOMOTIVE / AVIATION / MARINE -->
-  <section class="feature auto" id="automotive">
+  <section class="feature fleet" id="fleet">
+    <div class="feature-bg" role="img" aria-label="Row of delivery trucks parked side by side"></div>
+    <div class="wrap"><div class="feature-copy">
+      <p class="eyebrow">Fleet detailing</p>
+      <h2>Your fleet is your first impression.</h2>
+      <p>Company cars, vans and trucks washed and detailed on site at your lot or yard. Flat per-vehicle pricing and monthly plans, so your vehicles stay clean without leaving the road.</p>
+      <a class="feature-link" href="#services" data-tab="fleet">Fleet pricing <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    </div></div>
+  </section>
+
+  <section class="feature auto right" id="automotive">
     <div class="feature-bg" role="img" aria-label="Yellow sports car in a garage"></div>
     <div class="wrap"><div class="feature-copy">
       <p class="eyebrow">Car detailing</p>
@@ -1304,7 +1315,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
     </div></div>
   </section>
 
-  <section class="feature air right" id="aviation">
+  <section class="feature air" id="aviation">
     <div class="feature-bg" role="img" aria-label="White private jet on the tarmac at golden hour"></div>
     <div class="wrap"><div class="feature-copy">
       <p class="eyebrow">Aircraft detailing</p>
@@ -1314,7 +1325,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
     </div></div>
   </section>
 
-  <section class="feature sea" id="marine">
+  <section class="feature sea right" id="marine">
     <div class="feature-bg" role="img" aria-label="Motor yacht at the dock at sunset"></div>
     <div class="wrap"><div class="feature-copy">
       <p class="eyebrow">Boat &amp; yacht detailing</p>
@@ -1334,11 +1345,22 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
       </div>
 
       <div class="tabs-scroll"><div class="tabs" role="tablist" aria-label="Service category">
-        <button class="tab" role="tab" id="tab-auto" aria-controls="panel-auto" aria-selected="true">Automotive</button>
-        <button class="tab" role="tab" id="tab-fleet" aria-controls="panel-fleet" aria-selected="false" tabindex="-1">Fleet</button>
-        <button class="tab" role="tab" id="tab-marine" aria-controls="panel-marine" aria-selected="false" tabindex="-1">Marine</button>
+        <button class="tab" role="tab" id="tab-fleet" aria-controls="panel-fleet" aria-selected="true">Fleet</button>
+        <button class="tab" role="tab" id="tab-auto" aria-controls="panel-auto" aria-selected="false" tabindex="-1">Automotive</button>
         <button class="tab" role="tab" id="tab-aviation" aria-controls="panel-aviation" aria-selected="false" tabindex="-1">Aviation</button>
+        <button class="tab" role="tab" id="tab-marine" aria-controls="panel-marine" aria-selected="false" tabindex="-1">Marine</button>
       </div></div>
+
+      <div class="tabpanel" role="tabpanel" id="panel-fleet" aria-labelledby="tab-fleet" tabindex="0">
+        <h3 class="panel-title">Fleet pricing</h3>
+        <p class="panel-note">Flat per-vehicle pricing for company cars, vans and trucks. We work on site at your lot or yard, so your vehicles never leave. Text us the number of vehicles and we&#x27;ll set up a schedule.</p>
+        <ul class="svc-list">
+          <li class="svc"><div class="svc-top"><h3>Fleet exterior wash</h3><span class="tag">Exterior</span></div><p>Hand wash, wheels, tires and exterior glass for work vehicles, done at your location.</p><div class="svc-foot"><span class="svc-price">$60 <small>/ vehicle</small></span></div></li>
+          <li class="svc"><div class="svc-top"><h3>Fleet interior</h3><span class="tag">Interior</span></div><p>Vacuum, wipe-down of all surfaces and interior glass so every vehicle is ready for the next shift.</p><div class="svc-foot"><span class="svc-price">$100 <small>/ vehicle</small></span></div></li>
+          <li class="svc"><div class="svc-top"><h3>Fleet full in &amp; out</h3><span class="tag">Ext · Int</span></div><p>Exterior wash and full interior clean together, per vehicle.</p><div class="svc-foot"><span class="svc-price">$150 <small>/ vehicle</small></span></div></li>
+          <li class="svc"><div class="svc-top"><h3>Monthly fleet maintenance</h3><span class="tag">Plan</span></div><p>Scheduled monthly visits to keep your whole fleet clean, billed per vehicle per visit.</p><div class="svc-foot"><span class="svc-price">$120 <small>/ vehicle per visit</small></span></div></li>
+        </ul>
+      </div>
 
       <div class="tabpanel" role="tabpanel" id="panel-auto" aria-labelledby="tab-auto" tabindex="0">
         <h3 class="panel-title">Automotive pricing</h3>
@@ -1357,16 +1379,18 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
           <li class="svc"><div class="svc-top"><h3>Ceramic coating</h3><span class="tag">Protection</span></div><p>Long-term gloss and protection that makes every wash easier. Applied after full decontamination and correction.</p><div class="svc-foot"><span class="svc-price quote">Ask for a quote</span><span class="svc-time" aria-label="Estimated time 5–8 hrs"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.5 1.5"/></svg><span>Est.</span> 5–8 hrs</span></div></li>
         </ul>
       </div>
-      <div class="tabpanel" role="tabpanel" id="panel-fleet" aria-labelledby="tab-fleet" tabindex="0">
-        <h3 class="panel-title">Fleet pricing</h3>
-        <p class="panel-note">Flat per-vehicle pricing for company cars, vans and trucks. We work on site at your lot or yard, so your vehicles never leave. Text us the number of vehicles and we&#x27;ll set up a schedule.</p>
+
+      <div class="tabpanel" role="tabpanel" id="panel-aviation" aria-labelledby="tab-aviation" tabindex="0">
+        <h3 class="panel-title">Aviation pricing</h3>
+        <p class="panel-note">Starting prices for private jets and turboprops. The final quote depends on aircraft size and condition.</p>
         <ul class="svc-list">
-          <li class="svc"><div class="svc-top"><h3>Fleet exterior wash</h3><span class="tag">Exterior</span></div><p>Hand wash, wheels, tires and exterior glass for work vehicles, done at your location.</p><div class="svc-foot"><span class="svc-price">$60 <small>/ vehicle</small></span></div></li>
-          <li class="svc"><div class="svc-top"><h3>Fleet interior</h3><span class="tag">Interior</span></div><p>Vacuum, wipe-down of all surfaces and interior glass so every vehicle is ready for the next shift.</p><div class="svc-foot"><span class="svc-price">$100 <small>/ vehicle</small></span></div></li>
-          <li class="svc"><div class="svc-top"><h3>Fleet full in &amp; out</h3><span class="tag">Ext · Int</span></div><p>Exterior wash and full interior clean together, per vehicle.</p><div class="svc-foot"><span class="svc-price">$150 <small>/ vehicle</small></span></div></li>
-          <li class="svc"><div class="svc-top"><h3>Monthly fleet maintenance</h3><span class="tag">Plan</span></div><p>Scheduled monthly visits to keep your whole fleet clean, billed per vehicle per visit.</p><div class="svc-foot"><span class="svc-price">$120 <small>/ vehicle per visit</small></span></div></li>
+          <li class="svc"><div class="svc-top"><h3>Aircraft exterior wash</h3><span class="tag">Exterior</span></div><p>Fuselage, wings, gear areas and windows washed to aviation standards.</p><div class="svc-foot"><span class="svc-price"><small class="pre">From</small> $500</span></div></li>
+          <li class="svc"><div class="svc-top"><h3>Aircraft interior detail</h3><span class="tag">Interior</span></div><p>Seats, carpets, panels, galley and lavatory cleaned, priced per seat.</p><div class="svc-foot"><span class="svc-price"><small class="pre">From</small> $100 <small>/ seat</small></span></div></li>
+          <li class="svc"><div class="svc-top"><h3>Aircraft surface protection</h3><span class="tag">Protection</span></div><p>Long-lasting protective coating for exterior surfaces against UV, grime and weather.</p><div class="svc-foot"><span class="svc-price"><small class="pre">From</small> $1,500</span></div></li>
+          <li class="svc"><div class="svc-top"><h3>Monthly aircraft maintenance</h3><span class="tag">Plan</span></div><p>Scheduled monthly upkeep so the aircraft is always ready to fly.</p><div class="svc-foot"><span class="svc-price"><small class="pre">From</small> $450 <small>/ month</small></span></div></li>
         </ul>
       </div>
+
       <div class="tabpanel" role="tabpanel" id="panel-marine" aria-labelledby="tab-marine" tabindex="0">
         <h3 class="panel-title">Marine pricing</h3>
         <p class="panel-note">Most marine services are priced per foot of boat length. These are starting prices, and the final quote depends on the vessel&#x27;s size and condition.</p>
@@ -1376,16 +1400,6 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
           <li class="svc"><div class="svc-top"><h3>Marine gelcoat correction</h3><span class="tag">Gelcoat</span></div><p>Machine compounding and polishing to remove oxidation and bring the gelcoat&#x27;s gloss back.</p><div class="svc-foot"><span class="svc-price"><small class="pre">From</small> $50 <small>/ ft</small></span></div></li>
           <li class="svc"><div class="svc-top"><h3>Marine ceramic protection</h3><span class="tag">Protection</span></div><p>Ceramic coating that protects gelcoat from UV, salt and water spots and makes washing easier.</p><div class="svc-foot"><span class="svc-price"><small class="pre">From</small> $75 <small>/ ft</small></span></div></li>
           <li class="svc"><div class="svc-top"><h3>Monthly marine maintenance</h3><span class="tag">Plan</span></div><p>Recurring washes and upkeep through the season to keep your boat dock-ready.</p><div class="svc-foot"><span class="svc-price"><small class="pre">From</small> $15 <small>/ ft per month</small></span></div></li>
-        </ul>
-      </div>
-      <div class="tabpanel" role="tabpanel" id="panel-aviation" aria-labelledby="tab-aviation" tabindex="0">
-        <h3 class="panel-title">Aviation pricing</h3>
-        <p class="panel-note">Starting prices for private jets and turboprops. The final quote depends on aircraft size and condition.</p>
-        <ul class="svc-list">
-          <li class="svc"><div class="svc-top"><h3>Aircraft exterior wash</h3><span class="tag">Exterior</span></div><p>Fuselage, wings, gear areas and windows washed to aviation standards.</p><div class="svc-foot"><span class="svc-price"><small class="pre">From</small> $500</span></div></li>
-          <li class="svc"><div class="svc-top"><h3>Aircraft interior detail</h3><span class="tag">Interior</span></div><p>Seats, carpets, panels, galley and lavatory cleaned, priced per seat.</p><div class="svc-foot"><span class="svc-price"><small class="pre">From</small> $100 <small>/ seat</small></span></div></li>
-          <li class="svc"><div class="svc-top"><h3>Aircraft surface protection</h3><span class="tag">Protection</span></div><p>Long-lasting protective coating for exterior surfaces against UV, grime and weather.</p><div class="svc-foot"><span class="svc-price"><small class="pre">From</small> $1,500</span></div></li>
-          <li class="svc"><div class="svc-top"><h3>Monthly aircraft maintenance</h3><span class="tag">Plan</span></div><p>Scheduled monthly upkeep so the aircraft is always ready to fly.</p><div class="svc-foot"><span class="svc-price"><small class="pre">From</small> $450 <small>/ month</small></span></div></li>
         </ul>
       </div>
 
@@ -1408,7 +1422,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
         <h2>The shop comes to you.</h2>
         <p>No drop-off, no ride home, no losing a day. We set up where your car already is and you get on with yours. Every visit is planned and logged like a work order, so you know exactly what was done.</p>
         <ul class="combo-points">
-          <li>Driveway, condo garage or office lot</li>
+          <li>Driveway, condo, apartment, garage or parking lot</li>
           <li>Inside and out in a single visit</li>
           <li>You approve the plan before we start</li>
         </ul>
@@ -1580,7 +1594,7 @@ input::placeholder,textarea::placeholder{color:var(--muted)}
       <a class="mark" href="#top">PRΞCISION LΛBZ</a>
       <p>Mobile Detailing · Automotive, Fleet, Aviation &amp; Marine · Greater Toronto Area · © 2026</p>
       <p>Text or call <a href="sms:+16472749453">(647) 274-9453</a> · <a href="mailto:Precisionlab2024@gmail.com">Precisionlab2024@gmail.com</a> · <a href="https://www.instagram.com/precision.labz/" target="_blank" rel="noopener me">Instagram @precision.labz</a></p>
-      <p class="photo-credit">Photos: <a href="https://unsplash.com/@martuflex" target="_blank" rel="noopener">Mathew Antony</a>, <a href="https://unsplash.com/photos/private-jet-on-tarmac-at-sunset-6w_dYdazo20" target="_blank" rel="noopener">Unsplash</a>, <a href="https://unsplash.com/@barczakshoots" target="_blank" rel="noopener">Damian Barczak</a></p>
+      <p class="photo-credit">Photos: <a href="https://unsplash.com/@ragojose" target="_blank" rel="noopener">Jose Rago</a>, <a href="https://unsplash.com/@martuflex" target="_blank" rel="noopener">Mathew Antony</a>, <a href="https://unsplash.com/photos/private-jet-on-tarmac-at-sunset-6w_dYdazo20" target="_blank" rel="noopener">Unsplash</a>, <a href="https://unsplash.com/@barczakshoots" target="_blank" rel="noopener">Damian Barczak</a></p>
     </div>
     <nav class="foot-links" aria-label="Footer">
       <a href="#services">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a>
